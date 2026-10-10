@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Founders() {
   return (
@@ -79,26 +80,52 @@ export default function Founders() {
               ))}
             </div>
 
-            {/* Founder names */}
-            <div className="mt-10 pt-8 border-t border-[#D8D3C8] flex items-center gap-8">
-              <div>
-                <p
-                  className="text-sm font-semibold text-[#171816]"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  Prathamesh
-                </p>
-                <p className="text-micro text-[#92938B] mt-0.5">Co-founder</p>
+            {/* Founder portraits & credentials */}
+            <div className="mt-12 pt-8 border-t border-[#D8D3C8] grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="flex items-center gap-4">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#171816] flex-shrink-0 bg-[#E7E2D7]">
+                  <Image
+                    src="/images/prathamesh.jpg"
+                    alt="Prathamesh — Founder of SPARK Studio"
+                    width={64}
+                    height={64}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <div>
+                  <p
+                    className="text-base font-semibold text-[#171816]"
+                    style={{ fontFamily: "var(--font-display)" }}
+                  >
+                    Prathamesh
+                  </p>
+                  <p className="text-micro text-[#171816] font-bold mt-0.5 tracking-wider">
+                    Founder
+                  </p>
+                </div>
               </div>
-              <div className="h-6 w-px bg-[#D8D3C8]" />
-              <div>
-                <p
-                  className="text-sm font-semibold text-[#171816]"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  Rohan
-                </p>
-                <p className="text-micro text-[#92938B] mt-0.5">Co-founder</p>
+
+              <div className="flex items-center gap-4">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#D8D3C8] flex-shrink-0 bg-[#E7E2D7]">
+                  <Image
+                    src="/images/rohan.jpg"
+                    alt="Rohan — Co-founder of SPARK Studio"
+                    width={64}
+                    height={64}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <div>
+                  <p
+                    className="text-base font-semibold text-[#171816]"
+                    style={{ fontFamily: "var(--font-display)" }}
+                  >
+                    Rohan
+                  </p>
+                  <p className="text-micro text-[#92938B] mt-0.5 tracking-wider">
+                    Co-founder
+                  </p>
+                </div>
               </div>
             </div>
           </div>

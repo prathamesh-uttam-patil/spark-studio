@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { createMetadata } from "@/lib/metadata";
@@ -92,36 +93,41 @@ export default function AboutPage() {
             {[
               {
                 name: "Prathamesh",
-                role: "Co-founder",
+                role: "Founder",
+                image: "/images/prathamesh.jpg",
                 description:
-                  "Brings together design thinking and technical implementation. Believes that the gap between how something looks and how it works should be zero.",
+                  "Founder of SPARK Studio. Leads design direction, creative technology, and brand execution. Believes that the gap between how something looks and how it works should be zero.",
               },
               {
                 name: "Rohan",
                 role: "Co-founder",
+                image: "/images/rohan.jpg",
                 description:
-                  "Focuses on creative technology and digital strategy. Interested in how technology can be shaped around human behaviour rather than the other way around.",
+                  "Co-founder. Focuses on creative technology, intelligent systems, and digital strategy. Interested in how technology can be shaped around human behaviour rather than the other way around.",
               },
             ].map((founder) => (
-              <div key={founder.name} className="bg-[#171816] p-10">
-                {/* Portrait placeholder — intentionally minimal */}
-                <div
-                  className="w-16 h-16 border border-[#343530] mb-6 flex items-center justify-center"
-                  aria-hidden="true"
-                >
-                  <span className="text-[#343530] text-xl">
-                    {founder.name[0]}
-                  </span>
+              <div key={founder.name} className="bg-[#171816] p-8 sm:p-10 flex flex-col justify-between group">
+                <div>
+                  {/* Portrait photo */}
+                  <div className="relative w-28 h-28 sm:w-32 sm:h-32 mb-6 overflow-hidden border border-[#343530] bg-[#1d1e1b] group-hover:border-[#C8F169] transition-colors duration-300">
+                    <Image
+                      src={founder.image}
+                      alt={`${founder.name} — ${founder.role} of SPARK Studio`}
+                      width={128}
+                      height={128}
+                      className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500"
+                    />
+                  </div>
+                  <h3
+                    className="text-display-sm text-[#F3F0E8] mb-1"
+                    style={{ fontFamily: "var(--font-display)" }}
+                  >
+                    {founder.name}
+                  </h3>
+                  <p className={`text-micro mb-6 font-semibold tracking-wider ${founder.role === "Founder" ? "text-[#C8F169]" : "text-[#92938B]"}`}>
+                    {founder.role}
+                  </p>
                 </div>
-                <h3
-                  className="text-display-sm text-[#F3F0E8] mb-1"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  {founder.name}
-                </h3>
-                <p className="text-micro text-[#C8F169] mb-6">
-                  {founder.role}
-                </p>
                 <p className="text-body text-[#92938B]">
                   {founder.description}
                 </p>
