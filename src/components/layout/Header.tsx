@@ -50,9 +50,12 @@ export default function Header() {
     };
   }, [isMobileOpen]);
 
-  const headerBg = isScrolled
-    ? "bg-[#171816]/95 backdrop-blur-sm border-b border-[#343530]/60"
-    : "bg-transparent";
+  const isHome = pathname === "/";
+  const headerBg = isHome
+    ? isScrolled
+      ? "bg-[#10110F]/95 backdrop-blur-md border-b border-[#343530]/60 shadow-sm"
+      : "bg-transparent"
+    : "bg-[#10110F]/95 backdrop-blur-md border-b border-[#343530]/60 shadow-sm";
 
   return (
     <header
