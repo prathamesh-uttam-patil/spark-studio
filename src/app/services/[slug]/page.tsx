@@ -31,7 +31,10 @@ export default async function ServiceDetailPage({ params }: Props) {
   return (
     <>
       {/* Header */}
-      <section className="bg-[#10110F] pt-12 md:pt-16 pb-16 md:pb-20">
+      <section
+        className="bg-[#10110F] pt-36 md:pt-44 pb-16 md:pb-20"
+        style={{ paddingTop: "clamp(9rem, 15vw, 12rem)" }}
+      >
         <div className="container-spark">
           <Link
             href="/services"

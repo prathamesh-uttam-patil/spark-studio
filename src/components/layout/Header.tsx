@@ -58,11 +58,10 @@ export default function Header() {
     : "bg-[#10110F]/95 backdrop-blur-md border-b border-[#343530]/60 shadow-sm";
 
   return (
-    <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBg}`}
-        role="banner"
-      >
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBg}`}
+      role="banner"
+    >
       <div className="container-spark">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
@@ -196,15 +195,7 @@ export default function Header() {
           </p>
         </div>
       )}
-      </header>
-      {!isHome && (
-        <div
-          className="w-full shrink-0 h-16 md:h-18"
-          style={{ minHeight: "72px" }}
-          aria-hidden="true"
-        />
-      )}
-    </>
+    </header>
   );
 }
 

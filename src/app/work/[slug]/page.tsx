@@ -36,8 +36,11 @@ export default async function CaseStudyPage({ params }: Props) {
     <>
       {/* Header */}
       <section
-        className="pt-12 md:pt-16 pb-16 md:pb-20"
-        style={{ backgroundColor: project.thumbnail.bg }}
+        className="pt-36 md:pt-44 pb-16 md:pb-20"
+        style={{
+          backgroundColor: project.thumbnail.bg,
+          paddingTop: "clamp(9rem, 15vw, 12rem)",
+        }}
       >
         <div className="container-spark">
           <Link
