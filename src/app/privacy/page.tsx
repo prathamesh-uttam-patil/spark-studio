@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
 export default function PrivacyPage() {
   return (
     <>
-      <section className="bg-[#10110F] page-header-pad">
+      <section className="bg-[#10110F] pt-12 md:pt-16 pb-16">
         <div className="container-spark">
           <p className="text-micro text-[#C8F169] mb-6">LEGAL</p>
           <h1
