@@ -203,6 +203,11 @@ body {
   padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
+.page-header-pad {
+  padding-top: clamp(8.5rem, 15vw, 12rem);
+  padding-bottom: clamp(4rem, 8vw, 6rem);
+}
+
 /* ============================================================
    INTERACTION STATES
    ============================================================ */

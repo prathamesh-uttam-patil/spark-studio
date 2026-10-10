@@ -36,7 +36,7 @@ export default async function CaseStudyPage({ params }: Props) {
     <>
       {/* Header */}
       <section
-        className="pt-28 md:pt-36 pb-16 md:pb-20"
+        className="page-header-pad"
         style={{ backgroundColor: project.thumbnail.bg }}
       >
         <div className="container-spark">
