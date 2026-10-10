@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#10110F"/>
+  <rect x="40" y="40" width="1120" height="550" stroke="#343530" stroke-width="2"/>
+  
+  <!-- Outer mark -->
+  <rect x="100" y="100" width="56" height="56" rx="6" stroke="#C8F169" stroke-width="3" fill="none"/>
+  <path d="M128 112 L131.6 124.4 L144 128 L131.6 131.6 L128 144 L124.4 131.6 L112 128 L124.4 124.4 Z" fill="#C8F169"/>
+  <text x="176" y="138" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#F3F0E8" letter-spacing="-0.02em">SPARK STUDIO</text>
+  
+  <!-- Headline -->
+  <text x="100" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="700" fill="#F3F0E8" letter-spacing="-0.03em">Ideas deserve</text>
+  <text x="100" y="356" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="700" fill="#92938B" letter-spacing="-0.03em">better <tspan fill="#F3F0E8">execution.</tspan></text>
+  
+  <!-- Tagline -->
+  <text x="100" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#92938B">Creative technology, distinctive digital experiences, AI tools &amp; 3D web.</text>
+  
+  <!-- Founders & Contact -->
+  <text x="100" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#C8F169" letter-spacing="0.1em" font-weight="600">FOUNDED BY PRATHAMESH &amp; ROHAN</text>
+  <text x="860" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#92938B">teamsparkworks@gmail.com</text>
+</svg>

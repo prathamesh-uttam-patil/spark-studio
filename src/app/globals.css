@@ -1,0 +1,418 @@
+@import "tailwindcss";
+
+/* ============================================================
+   SPARK STUDIO — DESIGN TOKENS
+   ============================================================ */
+
+:root {
+  /* Brand Colors */
+  --color-charcoal: #171816;
+  --color-deep-charcoal: #10110f;
+  --color-warm-ivory: #f3f0e8;
+  --color-soft-ivory: #e7e2d7;
+  --color-muted-gray: #92938b;
+  --color-lime: #c8f169;
+  --color-orange: #ff784f;
+  --color-dark-border: #343530;
+  --color-light-border: #d8d3c8;
+
+  /* Semantic tokens */
+  --color-bg-primary: var(--color-charcoal);
+  --color-bg-secondary: var(--color-deep-charcoal);
+  --color-bg-light: var(--color-warm-ivory);
+  --color-text-primary-dark: var(--color-warm-ivory);
+  --color-text-secondary-dark: var(--color-muted-gray);
+  --color-text-primary-light: var(--color-charcoal);
+  --color-text-secondary-light: #5a5b55;
+  --color-accent: var(--color-lime);
+  --color-accent-secondary: var(--color-orange);
+
+  /* Typography */
+  --font-display: "DM Sans", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-48: 12rem;
+
+  /* Container */
+  --container-max: 1440px;
+  --container-pad-x: clamp(1.25rem, 5vw, 5rem);
+
+  /* Motion tokens */
+  --duration-fast: 120ms;
+  --duration-normal: 220ms;
+  --duration-slow: 400ms;
+  --duration-slower: 700ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   TAILWIND V4 THEME EXTENSION
+   ============================================================ */
+
+@theme inline {
+  --color-charcoal: #171816;
+  --color-deep-charcoal: #10110f;
+  --color-warm-ivory: #f3f0e8;
+  --color-soft-ivory: #e7e2d7;
+  --color-muted-gray: #92938b;
+  --color-lime: #c8f169;
+  --color-orange: #ff784f;
+  --color-dark-border: #343530;
+  --color-light-border: #d8d3c8;
+
+  --font-display: "DM Sans", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+/* ============================================================
+   BASE RESET & TYPOGRAPHY
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-charcoal);
+  color: var(--color-warm-ivory);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--color-lime);
+  color: var(--color-charcoal);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: top var(--duration-fast);
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ============================================================
+   TYPOGRAPHY SCALE
+   ============================================================ */
+
+.text-display-xl {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+}
+
+.text-display-lg {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.text-display-md {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-display-sm {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.text-body-lg {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.text-caption {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.text-micro {
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+
+.container-spark {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad-x);
+  padding-right: var(--container-pad-x);
+}
+
+.section-pad {
+  padding-top: clamp(4rem, 10vw, 8rem);
+  padding-bottom: clamp(4rem, 10vw, 8rem);
+}
+
+.section-pad-sm {
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+/* ============================================================
+   INTERACTION STATES
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   BUTTON SYSTEM
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  transition: all var(--duration-normal) var(--ease-out);
+  position: relative;
+}
+
+.btn-primary {
+  background: var(--color-lime);
+  color: var(--color-charcoal);
+}
+
+.btn-primary:hover {
+  background: #d4f77c;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-warm-ivory);
+  border: 1px solid var(--color-dark-border);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-warm-ivory);
+  background: rgba(243, 240, 232, 0.05);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--color-charcoal);
+  border: 1px solid var(--color-charcoal);
+}
+
+.btn-outline-dark:hover {
+  background: var(--color-charcoal);
+  color: var(--color-warm-ivory);
+}
+
+.btn-text {
+  background: transparent;
+  color: var(--color-warm-ivory);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-text:hover {
+  color: var(--color-lime);
+}
+
+/* ============================================================
+   DIVIDERS
+   ============================================================ */
+
+.divider-dark {
+  height: 1px;
+  background: var(--color-dark-border);
+}
+
+.divider-light {
+  height: 1px;
+  background: var(--color-light-border);
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slower) var(--ease-out),
+    transform var(--duration-slower) var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   SELECTION
+   ============================================================ */
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-charcoal);
+}
+
+/* ============================================================
+   FORM ELEMENTS
+   ============================================================ */
+
+.input-spark {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: transparent;
+  border: 1px solid var(--color-dark-border);
+  color: var(--color-warm-ivory);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  outline: none;
+  transition: border-color var(--duration-normal) var(--ease-out);
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.input-spark::placeholder {
+  color: var(--color-muted-gray);
+}
+
+.input-spark:focus {
+  border-color: var(--color-lime);
+}
+
+.input-spark.error {
+  border-color: #e85555;
+}
+
+.label-spark {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted-gray);
+  margin-bottom: 0.5rem;
+}
+
+.error-text {
+  font-size: 0.8125rem;
+  color: #e85555;
+  margin-top: 0.375rem;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-deep-charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-gray);
+}
+
+/* ============================================================
+   THREE.JS CANVAS
+   ============================================================ */
+
+canvas {
+  display: block;
+}
+
+/* Prevent canvas from intercepting clicks on UI */
+.three-overlay {
+  pointer-events: none;
+}
