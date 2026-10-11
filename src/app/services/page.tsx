@@ -52,67 +52,68 @@ export default function ServicesPage() {
               return (
                 <div
                   key={service.id}
-                  className="bg-[#171816] p-10 lg:p-14 grid grid-cols-1 lg:grid-cols-12 gap-8"
+                  className="bg-[#171816] p-8 md:p-12 lg:p-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start"
                 >
-                  <div className="lg:col-span-4">
-                    <div className="flex items-center gap-3 mb-6">
-                      <span className="text-micro text-[#C8F169] font-bold">
-                        0{i + 1}
-                      </span>
-                      <Icon size={18} className="text-[#C8F169]" />
+                  {/* Left: Identity & Link */}
+                  <div className="lg:col-span-5 flex flex-col justify-between h-full">
+                    <div>
+                      <div className="flex items-center gap-3 mb-6">
+                        <span className="text-micro text-[#C8F169] font-bold tracking-wider">
+                          0{i + 1}
+                        </span>
+                        <div className="w-8 h-px bg-[#343530]" />
+                        <Icon size={16} className="text-[#C8F169]" />
+                      </div>
+                      <h2
+                        className="text-display-md text-[#F3F0E8] mb-3"
+                        style={{ fontFamily: "var(--font-display)" }}
+                      >
+                        {service.title}
+                      </h2>
+                      <p className="text-sm text-[#92938B] italic mb-8">
+                        &ldquo;{service.tagline}&rdquo;
+                      </p>
                     </div>
-                    <h2
-                      className="text-display-md text-[#F3F0E8] mb-4"
-                      style={{ fontFamily: "var(--font-display)" }}
-                    >
-                      {service.title}
-                    </h2>
-                    <p className="text-sm text-[#92938B] italic mb-6">
-                      &ldquo;{service.tagline}&rdquo;
-                    </p>
+
                     <Link
                       href={`/services/${service.slug}`}
-                      className="btn btn-outline text-sm py-3 px-5 inline-flex"
+                      className="btn btn-outline text-sm py-2.5 px-5 inline-flex items-center gap-2 self-start"
                     >
-                      Learn more <ArrowRight size={14} className="ml-1" />
+                      View full details <ArrowRight size={14} />
                     </Link>
                   </div>
 
-                  <div className="lg:col-span-4">
-                    <p className="text-[#92938B] text-sm leading-relaxed mb-6">
+                  {/* Right: Core facts & scope */}
+                  <div className="lg:col-span-7 flex flex-col gap-6 lg:pl-8 lg:border-l lg:border-[#343530]">
+                    <p className="text-base text-[#F3F0E8] leading-relaxed">
                       {service.description}
                     </p>
-                    <p className="text-caption text-[#C8F169] font-medium tracking-wider mb-3">
-                      TYPICAL DELIVERABLES
-                    </p>
-                    <ul className="flex flex-col gap-2">
-                      {service.deliverables.map((d) => (
-                        <li
-                          key={d}
-                          className="flex items-center gap-2 text-sm text-[#F3F0E8]"
-                        >
-                          <span className="w-1.5 h-1.5 bg-[#C8F169] flex-shrink-0" />
-                          {d}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
 
-                  <div className="lg:col-span-4">
-                    <p className="text-caption text-[#C8F169] font-medium tracking-wider mb-3">
-                      SUITABLE FOR
-                    </p>
-                    <ul className="flex flex-col gap-2 mb-8">
-                      {service.suitableFor.map((s) => (
-                        <li
-                          key={s}
-                          className="flex items-start gap-2 text-sm text-[#92938B]"
-                        >
-                          <span className="w-1.5 h-1.5 bg-[#92938B] flex-shrink-0 mt-1.5" />
-                          {s}
-                        </li>
-                      ))}
-                    </ul>
+                    <div>
+                      <p className="text-micro text-[#C8F169] font-semibold tracking-wider mb-3.5">
+                        CORE DELIVERABLES
+                      </p>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {service.deliverables.slice(0, 4).map((d) => (
+                          <li
+                            key={d}
+                            className="flex items-center gap-2.5 text-sm text-[#E7E2D7]"
+                          >
+                            <span className="w-1.5 h-1.5 bg-[#C8F169] rounded-full flex-shrink-0" />
+                            <span>{d}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="pt-4 border-t border-[#343530]/60 flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-2 text-sm">
+                      <span className="text-micro text-[#92938B] font-semibold tracking-wider shrink-0">
+                        IDEAL FOR:
+                      </span>
+                      <span className="text-sm text-[#92938B]">
+                        {service.suitableFor[0]}
+                      </span>
+                    </div>
                   </div>
                 </div>
               );
