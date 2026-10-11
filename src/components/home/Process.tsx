@@ -65,7 +65,7 @@ export default function Process() {
               )}
 
               <span
-                className="block text-[3rem] font-bold text-[#343530] mb-6 leading-none"
+                className="block text-[3rem] font-bold text-[#92938B]/80 mb-6 leading-none transition-colors"
                 style={{ fontFamily: "var(--font-display)" }}
                 aria-hidden="true"
               >

@@ -111,7 +111,7 @@ export default function Hero() {
           </div>
 
           {/* Microcopy */}
-          <p className="text-micro text-[#343530]">
+          <p className="text-micro text-[#92938B]">
             Design × Technology × Imagination
           </p>
         </div>
@@ -129,8 +129,8 @@ export default function Hero() {
 
       {/* Scroll cue */}
       <div className="container-spark relative z-10 pb-8 hidden lg:flex items-center gap-3">
-        <div className="h-8 w-px bg-[#343530]" />
-        <span className="text-micro text-[#343530]">SCROLL</span>
+        <div className="h-8 w-px bg-[#92938B]/40" />
+        <span className="text-micro text-[#92938B]">SCROLL</span>
       </div>
 
       {/* Bottom edge — subtle fade into next section */}

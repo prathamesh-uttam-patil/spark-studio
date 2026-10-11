@@ -137,10 +137,10 @@ export default function WorkPage() {
             {/* "More coming" card */}
             <div className="bg-[#171816] p-8 flex items-center justify-center min-h-[300px] border border-dashed border-[#343530] lg:col-span-1">
               <div className="text-center">
-                <div className="w-8 h-8 border border-[#343530] mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-[#343530] text-lg">+</span>
+                <div className="w-8 h-8 border border-[#92938B]/50 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-[#92938B] text-lg">+</span>
                 </div>
-                <p className="text-sm text-[#343530]">
+                <p className="text-sm text-[#92938B]">
                   Real client projects coming soon.
                 </p>
               </div>

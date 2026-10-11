@@ -118,7 +118,7 @@ export default function AboutPage() {
                       alt={`${founder.name} — ${founder.role} of SPARK Studio`}
                       width={128}
                       height={128}
-                      className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500"
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <h3

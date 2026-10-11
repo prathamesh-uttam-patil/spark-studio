@@ -136,7 +136,7 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-8">
-          <p className="text-micro text-[#343530]">
+          <p className="text-micro text-[#92938B]">
             © {year} SPARK Studio. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
@@ -144,13 +144,13 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-micro text-[#343530] hover:text-[#92938B] transition-colors"
+                className="text-micro text-[#92938B] hover:text-[#F3F0E8] transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </div>
-          <p className="text-micro text-[#343530]">Built with intention.</p>
+          <p className="text-micro text-[#92938B]">Built with intention.</p>
         </div>
       </div>
     </footer>

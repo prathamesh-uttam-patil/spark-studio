@@ -330,14 +330,14 @@ export default function InquiryForm() {
           )}
         </button>
         <a
-          href="mailto:teamsparkworks@gmail.com"
+          href="mailto:teamsparkworks@gmail.com?subject=Project Inquiry — SPARK Studio"
           className="btn btn-outline py-4 px-8 text-[0.9375rem]"
         >
           Prefer email
         </a>
       </div>
 
-      <p className="text-micro text-[#343530]">
+      <p className="text-micro text-[#92938B]">
         We respond to all inquiries within 2 business days.
       </p>
     </form>

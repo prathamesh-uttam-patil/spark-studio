@@ -109,12 +109,12 @@ export default function ServicesOverview() {
               >
                 {/* Number + Icon */}
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-micro text-[#343530]">
+                  <span className="text-micro text-[#92938B] font-semibold">
                     0{i + 1}
                   </span>
                   <Icon
                     size={20}
-                    className="text-[#343530] group-hover:text-[#C8F169] transition-colors duration-300"
+                    className="text-[#92938B] group-hover:text-[#C8F169] transition-colors duration-300"
                   />
                 </div>
 

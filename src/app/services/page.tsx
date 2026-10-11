@@ -56,7 +56,7 @@ export default function ServicesPage() {
                 >
                   <div className="lg:col-span-4">
                     <div className="flex items-center gap-3 mb-6">
-                      <span className="text-micro text-[#343530]">
+                      <span className="text-micro text-[#C8F169] font-bold">
                         0{i + 1}
                       </span>
                       <Icon size={18} className="text-[#C8F169]" />
@@ -82,16 +82,16 @@ export default function ServicesPage() {
                     <p className="text-[#92938B] text-sm leading-relaxed mb-6">
                       {service.description}
                     </p>
-                    <p className="text-caption text-[#343530] mb-3">
+                    <p className="text-caption text-[#C8F169] font-medium tracking-wider mb-3">
                       TYPICAL DELIVERABLES
                     </p>
                     <ul className="flex flex-col gap-2">
                       {service.deliverables.map((d) => (
                         <li
                           key={d}
-                          className="flex items-center gap-2 text-sm text-[#92938B]"
+                          className="flex items-center gap-2 text-sm text-[#F3F0E8]"
                         >
-                          <span className="w-1 h-1 bg-[#C8F169] flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 bg-[#C8F169] flex-shrink-0" />
                           {d}
                         </li>
                       ))}
@@ -99,7 +99,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="lg:col-span-4">
-                    <p className="text-caption text-[#343530] mb-3">
+                    <p className="text-caption text-[#C8F169] font-medium tracking-wider mb-3">
                       SUITABLE FOR
                     </p>
                     <ul className="flex flex-col gap-2 mb-8">
@@ -108,7 +108,7 @@ export default function ServicesPage() {
                           key={s}
                           className="flex items-start gap-2 text-sm text-[#92938B]"
                         >
-                          <span className="w-1 h-1 bg-[#343530] flex-shrink-0 mt-1.5" />
+                          <span className="w-1.5 h-1.5 bg-[#92938B] flex-shrink-0 mt-1.5" />
                           {s}
                         </li>
                       ))}
