@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
@@ -67,17 +68,18 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-3 group"
+            className="flex items-center group py-2"
             aria-label="SPARK Studio — return to homepage"
             onClick={() => trackEvent("navigation_click", { label: "logo" })}
           >
-            <SparkLogo />
-            <span
-              className="font-display font-bold text-[1.0625rem] tracking-tight text-warm-ivory"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              SPARK
-            </span>
+            <Image
+              src="/spark-logo-light.png"
+              alt="SPARK Studio"
+              width={130}
+              height={34}
+              priority
+              className="h-7 md:h-8 w-auto object-contain transition-opacity duration-200 group-hover:opacity-90"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -139,16 +141,18 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 px-5">
             <Link
               href="/"
-              className="flex items-center gap-3"
-              aria-label="SPARK Studio"
+              className="flex items-center py-2"
+              aria-label="SPARK Studio — return to homepage"
+              onClick={() => setIsMobileOpen(false)}
             >
-              <SparkLogo />
-              <span
-                className="font-bold text-[1.0625rem] text-[#F3F0E8]"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                SPARK
-              </span>
+              <Image
+                src="/spark-logo-light.png"
+                alt="SPARK Studio"
+                width={130}
+                height={34}
+                priority
+                className="h-7 w-auto object-contain"
+              />
             </Link>
             <button
               className="flex items-center justify-center w-10 h-10 text-[#F3F0E8]"
@@ -196,35 +200,5 @@ export default function Header() {
         </div>
       )}
     </header>
-  );
-}
-
-function SparkLogo() {
-  return (
-    <svg
-      width="28"
-      height="28"
-      viewBox="0 0 28 28"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      {/* Outer square */}
-      <rect
-        x="1"
-        y="1"
-        width="26"
-        height="26"
-        rx="3"
-        stroke="#C8F169"
-        strokeWidth="1.5"
-        fill="none"
-      />
-      {/* Inner geometric mark — four-point spark */}
-      <path
-        d="M14 6 L15.8 12.2 L22 14 L15.8 15.8 L14 22 L12.2 15.8 L6 14 L12.2 12.2 Z"
-        fill="#C8F169"
-      />
-    </svg>
   );
 }

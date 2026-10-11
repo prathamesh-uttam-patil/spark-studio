@@ -11,8 +11,9 @@ Built with **Next.js (App Router)**, **React**, **TypeScript**, **Tailwind CSS**
 - **Positioning:** Wild creative energy. Restrained execution.
 - **Founders:** Prathamesh and Rohan
 - **Business Email:** `teamsparkworks@gmail.com`
-- **Design Metaphor:** *The Controlled Spark* — Architectural typography and quiet editorial rhythm contrasting with an evolving geometric 3D sculpture (**SPARK Core**).
-- **Signature 3D:** Procedurally generated sculpture that choreographs across 4 scroll stages (Introduction, Exploration, Transformation, Resolution).
+- **Official Logo:** High-resolution transparent SPARK wordmark with integrated vibrant orange-to-magenta gradient spark.
+- **Design Metaphor:** *The Controlled Spark* — Architectural typography and quiet editorial rhythm contrasting with a tactile, interactive charcoal 3D cube with beveled tiles and restrained orange seam lighting.
+- **Interactive 3D Hero Cube:** Interactive Three.js/R3F sculptural cube with cursor parallax, smooth click/touch dragging, inertia damping, scroll-linked layer articulation and seam expansion, and automatic idle reset.
 - **Portfolio Integrity:** Fictional exploration projects are explicitly labeled as `CONCEPT PROJECT`.
 
 ---
@@ -44,7 +45,7 @@ spark-studio/
 │   ├── components/
 │   │   ├── layout/         # Header, Footer, Mobile navigation
 │   │   ├── home/           # Hero, StudioIntro, ServicesOverview, SelectedWork, Process, etc.
-│   │   ├── three/          # SparkCore, HeroScene, HeroSceneFallback, SceneErrorBoundary
+│   │   ├── three/          # HeroCube, HeroScene, HeroSceneFallback, SceneErrorBoundary
 │   │   └── contact/        # InquiryForm with Zod client & server validation
 │   ├── data/               # Typed data models (services.ts, projects.ts, faq.ts)
 │   └── lib/                # SEO metadata, Zod validation schemas, analytics layer

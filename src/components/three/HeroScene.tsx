@@ -4,7 +4,7 @@ import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, AdaptiveDpr, AdaptiveEvents } from "@react-three/drei";
 import SceneErrorBoundary from "./SceneErrorBoundary";
-import SparkCore from "./SparkCore";
+import HeroCube from "./HeroCube";
 import HeroSceneFallback from "./HeroSceneFallback";
 
 interface HeroSceneProps {
@@ -84,36 +84,37 @@ export default function HeroScene({ scrollProgress = 0, className = "" }: HeroSc
             alpha: true,
             powerPreference: "high-performance",
           }}
-          aria-label="SPARK Core — decorative 3D sculpture"
+          aria-label="SPARK Studio — Interactive 3D Cube"
           role="img"
-          style={{ pointerEvents: "none" }}
+          style={{ pointerEvents: "auto", touchAction: "pan-y" }}
           frameloop={isVisible ? "always" : "never"}
         >
           <AdaptiveDpr pixelated />
           <AdaptiveEvents />
           <Suspense fallback={null}>
-            {/* Lighting */}
-            <ambientLight intensity={0.4} color="#f3f0e8" />
+            {/* Studio Lighting tailored for charcoal facets and warm orange seams */}
+            <ambientLight intensity={0.45} color="#e8eae4" />
             <directionalLight
-              position={[3, 5, 3]}
-              intensity={1.8}
+              position={[3.5, 5, 3.5]}
+              intensity={2.0}
               color="#ffffff"
               castShadow={false}
             />
             <directionalLight
-              position={[-2, -1, -2]}
-              intensity={0.5}
-              color="#c8f169"
+              position={[-3, 2, -2]}
+              intensity={0.7}
+              color="#9ea39a"
             />
             <pointLight
-              position={[0, -3, 2]}
-              intensity={0.6}
+              position={[-2, -1.5, 2.2]}
+              intensity={0.85}
               color="#ff784f"
-              distance={8}
+              distance={7}
+              decay={2}
             />
             <Environment preset="city" />
 
-            <SparkCore
+            <HeroCube
               scrollProgress={scrollProgress}
               reducedMotion={reducedMotion}
             />

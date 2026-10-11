@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const FOOTER_LINKS = {
   studio: [
@@ -39,36 +40,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 pb-12 border-b border-[#343530]">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 28 28"
-                fill="none"
-                aria-hidden="true"
-              >
-                <rect
-                  x="1"
-                  y="1"
-                  width="26"
-                  height="26"
-                  rx="3"
-                  stroke="#C8F169"
-                  strokeWidth="1.5"
-                  fill="none"
-                />
-                <path
-                  d="M14 6 L15.8 12.2 L22 14 L15.8 15.8 L14 22 L12.2 15.8 L6 14 L12.2 12.2 Z"
-                  fill="#C8F169"
-                />
-              </svg>
-              <span
-                className="font-bold text-[1rem] text-[#F3F0E8]"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                SPARK
-              </span>
-            </div>
+            <Link
+              href="/"
+              className="inline-block mb-4 group"
+              aria-label="SPARK Studio — return to homepage"
+            >
+              <Image
+                src="/spark-logo-light.png"
+                alt="SPARK Studio"
+                width={130}
+                height={34}
+                className="h-7 w-auto object-contain transition-opacity duration-200 group-hover:opacity-90"
+              />
+            </Link>
             <p className="text-[#92938B] text-sm leading-relaxed max-w-[220px]">
               A creative technology studio combining design, technology, and
               experimentation.
